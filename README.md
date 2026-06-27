@@ -59,5 +59,5 @@ healthmaster-project/
 
 ## Контакты
 
-Telegram: [@your_username]
+Telegram: @art_buk2
 Email: your@email.com
