@@ -1,0 +1,99 @@
+{
+  "model": "gpt-4o",
+  "temperature": 0.7,
+  "max_tokens": 600,
+  "top_p": 1,
+  "frequency_penalty": 0.1,
+  "presence_penalty": 0.7,
+  "stop": [],
+  "system_prompt_version": "2.0",
+  "features": {
+    "durable_memory": true,
+    "personal_triggers": true,
+    "progress_tracking": true,
+    "open_loops": true,
+    "context_window": "30_days",
+    "free_tier_limits": {
+      "messages_per_day": 30,
+      "history_retention": "30_days"
+    },
+    "premium_tier_limits": {
+      "messages_per_day": 150,
+      "history_retention": "unlimited"
+    }
+  },
+  "triggers": {
+    "morning_checkin": {
+      "enabled": true,
+      "time_window": "07:00-10:00",
+      "message_type": "daily_plan"
+    },
+    "missed_meal": {
+      "enabled": true,
+      "threshold_hours": 6,
+      "message_type": "gentle_reminder"
+    },
+    "post_workout": {
+      "enabled": true,
+      "message_type": "recovery_nutrition"
+    },
+    "evening_recap": {
+      "enabled": true,
+      "time_window": "19:00-22:00",
+      "message_type": "daily_summary"
+    },
+    "achievement": {
+      "enabled": true,
+      "triggers": ["goal_reached", "pr_achieved", "streak"],
+      "message_type": "celebration"
+    },
+    "weekly_report": {
+      "enabled": true,
+      "frequency": "weekly",
+      "message_type": "progress_report",
+      "include_comparison": true
+    }
+  },
+  "durable_memory": {
+    "facts_to_store": [
+      "name",
+      "allergies",
+      "dietary_restrictions",
+      "goals",
+      "preferences",
+      "medical_conditions"
+    ],
+    "auto_extract": true,
+    "prompt_injection": "always"
+  },
+  "progress_tracking": {
+    "show_in_every_response": true,
+    "include_percentage": true,
+    "include_visual_bar": true,
+    "compare_with_baseline": true
+  },
+  "open_loops": {
+    "include_in_every_response": true,
+    "types": ["follow_up_question", "next_session_plan", "check_in_reminder"],
+    "max_per_response": 2
+  },
+  "analytics": {
+    "track_adoption": true,
+    "track_return_rate": true,
+    "track_one_and_done": true,
+    "track_session_length": true,
+    "track_trigger_effectiveness": true,
+    "track_durable_memory_usage": true,
+    "ab_testing": {
+      "enabled": true,
+      "variants": ["control", "new_prompt"],
+      "traffic_split": 0.5
+    }
+  },
+  "ab_test_baseline": {
+    "adoption": 0.18,
+    "return_rate": 0.17,
+    "one_and_done": 0.83,
+    "quality": 0.93
+  }
+}

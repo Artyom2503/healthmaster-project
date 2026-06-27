@@ -1,0 +1,53 @@
+{
+  "model": "gpt-4o",
+  "temperature": 0.7,
+  "max_tokens": 500,
+  "top_p": 1,
+  "frequency_penalty": 0,
+  "presence_penalty": 0.6,
+  "stop": [],
+  "system_prompt_version": "1.0",
+  "features": {
+    "durable_memory": false,
+    "personal_triggers": false,
+    "progress_tracking": false,
+    "open_loops": false,
+    "context_window": "14_days",
+    "free_tier_limits": {
+      "messages_per_day": 20,
+      "history_retention": "14_days"
+    },
+    "premium_tier_limits": {
+      "messages_per_day": 100,
+      "history_retention": "unlimited"
+    }
+  },
+  "triggers": {
+    "weekly_report": {
+      "enabled": true,
+      "frequency": "weekly",
+      "reaction_rate": "0%"
+    },
+    "missed_meal": {
+      "enabled": false
+    },
+    "post_workout": {
+      "enabled": false
+    },
+    "morning_checkin": {
+      "enabled": false
+    }
+  },
+  "analytics": {
+    "track_adoption": true,
+    "track_return_rate": true,
+    "track_one_and_done": true,
+    "track_session_length": true,
+    "baseline_metrics": {
+      "adoption": 0.18,
+      "return_rate": 0.17,
+      "one_and_done": 0.83,
+      "quality": 0.93
+    }
+  }
+}

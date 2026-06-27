@@ -1,0 +1,49 @@
+{
+  "period": "2026-06-01 to 2026-06-26",
+  "total_users": 1250,
+  "active_users": 225,
+  "metrics": {
+    "adoption": {
+      "value": 0.18,
+      "target": 0.50,
+      "status": "below_target"
+    },
+    "return_rate": {
+      "value": 0.17,
+      "target": 0.45,
+      "status": "below_target"
+    },
+    "one_and_done": {
+      "value": 0.83,
+      "target": 0.50,
+      "status": "below_target"
+    },
+    "quality": {
+      "value": 0.93,
+      "target": 0.90,
+      "status": "above_target"
+    }
+  },
+  "engagement": {
+    "avg_messages_per_session": 4.2,
+    "avg_session_duration_sec": 180,
+    "retention_day_1": 0.45,
+    "retention_day_7": 0.22,
+    "retention_day_30": 0.12
+  },
+  "triggers_performance": {
+    "weekly_report": {
+      "sent": 450,
+      "opened": 45,
+      "reaction_rate": 0.10,
+      "actions_taken": 0
+    }
+  },
+  "issues_identified": [
+    "Free tier история режется >14 дней",
+    "Нет durable-памяти для базовых фактов",
+    "Weekly_report не работает (0% реакции)",
+    "Нет visibility прогресса в ответах",
+    "Нет follow-up после пропусков"
+  ]
+}
